@@ -56,7 +56,7 @@
 								"value": "@pipeline().parameters.file_name",
 								"type": "Expression"
 							},
-							"column_delimiter": ",",
+							"column_delimiter": ";",
 							"quote_character": "\"",
 							"header_row": true
 						}
