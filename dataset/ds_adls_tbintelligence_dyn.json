@@ -1,0 +1,39 @@
+{
+	"name": "ds_adls_tbintelligence_dyn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_tbintelligence",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file_system": {
+				"type": "string"
+			},
+			"directory": {
+				"type": "string"
+			},
+			"file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().file_system",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}
