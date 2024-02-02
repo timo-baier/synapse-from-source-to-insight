@@ -1,0 +1,17 @@
+{
+	"name": "Select Statement",
+	"properties": {
+		"content": {
+			"query": "SELECT * FROM sap.Site",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "lakehouse",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
