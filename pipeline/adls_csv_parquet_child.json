@@ -70,7 +70,7 @@
 							"file_system": "lakehouse",
 							"directory": "bronze",
 							"file_name": {
-								"value": "@pipeline().parameters.file_name",
+								"value": "@replace(pipeline().parameters.file_name,'.csv','.parquet')",
 								"type": "Expression"
 							},
 							"compression_type": "snappy"
